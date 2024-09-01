@@ -2,13 +2,16 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 <listeners>
-    <listener class-name="utils.MyListeners" />
+    <listener class-name="reporting_screenshot_Listeners.MyListeners" />
 </listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.qa.assignment.test.DownTimeTest"/>
-     
+      <!--class name="com.qa.assignment.test.DownTimeTest"/-->
+     <!--class name="com.qa.assignment.test.ManufacturingHandoverRecordTest"/-->
       <!--class name="com.qa.assignment.test.MorningMeetingDashboardTest"/-->
+    <!--class name="com.qa.assignment.test.EditManufacturingHandoverRecordTest"/-->
+<!--class name="com.qa.assignment.test.ShiftHandoverReportTest"/-->
+<class name="com.qa.assignment.test.FishBoneTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

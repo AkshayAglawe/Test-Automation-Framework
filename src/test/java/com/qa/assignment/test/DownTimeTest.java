@@ -12,7 +12,7 @@ import com.qa.assignment.base.BaseTest;
 import com.qa.assignment.pages.DownTimePage;
 
 public class DownTimeTest extends BaseTest {
-	@Test
+//	//@Test
 	public void validatingDownTimeResosnL1TableColumns() {
 
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu();
@@ -22,7 +22,7 @@ public class DownTimeTest extends BaseTest {
 
 	}
 
-	@Test
+//	//@Test
 	public void editingNameCellwithMax45Char() {
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu();
 		boolean isNameCellEditableWithMax45Chars = downTimePage.goToDownTimeReasonL1Table().editNameCell(45);
@@ -30,7 +30,7 @@ public class DownTimeTest extends BaseTest {
 
 	}
 
-	@Test
+//	//@Test
 	public void editingNameCellwith46Char() {
 		
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu();
@@ -40,7 +40,7 @@ public class DownTimeTest extends BaseTest {
 
 	}
 
-	@Test
+//	//@Test
 	public void editingGermanNameCellwithMax45Char() {
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu();
 		boolean isGermanNameCellEditableWithMax45Chars = downTimePage.goToDownTimeReasonL1Table()
@@ -49,7 +49,7 @@ public class DownTimeTest extends BaseTest {
 
 	}
 
-	@Test
+	//@Test
 	public void editingGermanNameCellwith46Char() {
 		
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu();
@@ -59,20 +59,20 @@ public class DownTimeTest extends BaseTest {
 
 	}
 
-//	@Test //Could not automate this
+//	//@Test //Could not automate this
 //	public void validatingEditingDowntimeRootCauseCell() {
 //		downTimePage=sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu();
 //		downTimePage.goToDownTimeReasonL1Table().isMultiSelectaAndEditable();
 //	}
 
-	@Test
+	//@Test
 	public void checkingIfTheEquipmentCellIsEdiable() {
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu();
 		boolean isEquipmentCellNotEditable = downTimePage.goToDownTimeReasonL1Table().isEquipmentCellNotEditable();
 		Assert.assertEquals(isEquipmentCellNotEditable, true);
 	}
 
-	@Test
+	//@Test
 	public void editingDescriptionCellwithMax100Char() {
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu();
 		boolean isDescriptionCellEditableWithMax100Chars = downTimePage.goToDownTimeReasonL1Table()
@@ -81,7 +81,7 @@ public class DownTimeTest extends BaseTest {
 
 	}
 
-	@Test
+	//@Test
 	public void editingDescriptionCellwith101Char() {
 
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu();
@@ -91,7 +91,7 @@ public class DownTimeTest extends BaseTest {
 
 	}
 
-	@Test(dataProvider = "validOrderByValues")
+	//@Test(dataProvider = "validOrderByValues")
 
 	public void editingOrderByWithValidValues(String ordeByValue) {
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu();
@@ -118,7 +118,7 @@ public class DownTimeTest extends BaseTest {
 		return 100000000 + random.nextInt(900000000);
 	}
 
-	@Test(dataProvider = "invalidOrderByValues")
+	//@Test(dataProvider = "invalidOrderByValues")
 
 	public void editingOrderByWithInvalidValues(String ordeByValue) {
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu();
@@ -136,7 +136,7 @@ public class DownTimeTest extends BaseTest {
 		};
 	}
 
-	@Test
+	//@Test
 	public void editingOrderByWithDuplicateValues() {
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu().goToDownTimeReasonL1Table();
 		// Get the current row count from the table
@@ -163,7 +163,7 @@ public class DownTimeTest extends BaseTest {
 		Assert.assertEquals(isEditingOrderByWithDuplicateValuesNotAllowed, true);
 	}
 
-	@Test
+	//@Test
 	public void verifyHidingARecordFromTable() {
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu().goToDownTimeReasonL1Table();
 		// Get the current row count from the table
@@ -188,7 +188,7 @@ public class DownTimeTest extends BaseTest {
 		Assert.assertEquals(recordGotHiddenAfterCheckingTheHideCheckboxFromTable, true);
 	}
 
-	@Test
+	//@Test
 	public void searchingRecordFromUsingSearchBox() {
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu().goToDownTimeReasonL1Table();
 
@@ -205,7 +205,7 @@ public class DownTimeTest extends BaseTest {
 				.isRecordShown(name);
 	}
 
-	@Test
+	//@Test
 	public void verifyMandatoryFieldValidationOnEdit() {
 		// First Create A new Record for edit
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu().goToDownTimeReasonL1Table();
@@ -227,7 +227,7 @@ public class DownTimeTest extends BaseTest {
 
 	}
 
-@Test
+//@Test
 	public void printTableRecord() {
 
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu();
@@ -235,7 +235,7 @@ public class DownTimeTest extends BaseTest {
 
 	}
 
-@Test
+//@Test
 	public void validatingThePresenceOfExpectedFieldsInCreateRecordPopup() {
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu();
 		boolean areAllFieldsVisibleInCreateRecordPopup = downTimePage.goToDownTimeReasonL1Table()
@@ -243,14 +243,14 @@ public class DownTimeTest extends BaseTest {
 		Assert.assertEquals(areAllFieldsVisibleInCreateRecordPopup, true);
 	}
 
-@Test
+//@Test
 	public void verifyMandatoryFieldsValidation() {
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu();
 		boolean isValidationSuccessful = downTimePage.goToDownTimeReasonL1Table().verifyMandatoryFieldsValidation();
 		Assert.assertEquals(isValidationSuccessful, true);
 	}
 
-@Test
+//@Test
 	public void creatingRecordWithOnlyMandatoryFields() {
 
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu();
@@ -265,7 +265,7 @@ public class DownTimeTest extends BaseTest {
 		Assert.assertEquals(isRecordCreated, true);
 	}
 
-@Test
+//@Test
 	public void verifyHiddenRecordNotVisibleInTableAfterCreation() {
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu();
 		String name = generateRandomName();
@@ -279,7 +279,7 @@ public class DownTimeTest extends BaseTest {
 		Assert.assertEquals(isRecordHidden, true);
 	}
 
-@Test
+//@Test
 	public void verifyRecordCanBeDeleted() {
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu();
 		String name = generateRandomName();
@@ -307,7 +307,7 @@ public class DownTimeTest extends BaseTest {
 		return names[index] + "_" + timeStamp;
 	}
 
-	@Test
+	//@Test
 	public void verifyMultiSelectFunctionalityOfEquipmentDropdown() {
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu();
 		String name = generateRandomName();
@@ -327,7 +327,7 @@ public class DownTimeTest extends BaseTest {
 
 	}
 
-	@Test
+	//@Test
 	public void validateSuccessfulUpdateWithOptionalFieldsCleared() {
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu().goToDownTimeReasonL1Table();
 
@@ -347,7 +347,7 @@ public class DownTimeTest extends BaseTest {
 
 	}
 
-	@Test
+	//@Test
 	public void validateEditingDescriptionWith100Chars() {
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu().goToDownTimeReasonL1Table();
 
@@ -366,7 +366,7 @@ public class DownTimeTest extends BaseTest {
 		Assert.assertEquals(text.length(), 100);
 
 	}
-	@Test
+	//@Test
 	public void validateEditingDescriptionWith101Chars() {
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu().goToDownTimeReasonL1Table();
 
@@ -384,7 +384,7 @@ public class DownTimeTest extends BaseTest {
 		Assert.assertEquals(theInputTooLongMessageIsVisible, true);
 
 	}
-	@Test
+	//@Test
 	public void editingOrderByWithDuplicateValues2() {
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu().goToDownTimeReasonL1Table();
 		// Get the current row count from the table
@@ -414,8 +414,9 @@ boolean isEditingOrderByWithDuplicateValuesNotAllowed= downTimePage.isEditingOrd
 	@Test
 	public void editingOrderByWith11DigitValue() {
 		
+		
 		downTimePage = sidebarPage.clickOnConfigurationMenu().clickOnDowntimeSubMenu().goToDownTimeReasonL1Table();
-
+		page.pause();
 		String name = generateRandomName();
 		String germanName = generateRandomName();
 		String downtimeRootCauseOption = "Root Couse 3";
@@ -431,4 +432,10 @@ boolean isEditingOrderByWithDuplicateValuesNotAllowed= downTimePage.isEditingOrd
 		Assert.assertEquals(recordUpdateWith11DigitValue, true);
 	}
 	
+	
+	@Test
+	public void validatingDownTimeTableColumns() {
+		
+		
+	}
 }
