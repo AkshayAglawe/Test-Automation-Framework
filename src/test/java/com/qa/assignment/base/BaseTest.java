@@ -61,6 +61,9 @@ public class BaseTest {
         
     }
 
+    public void randomBranch() {
+    	//The random testing method added to master
+    }
     @AfterMethod
     public void tearDown() {
         page.context().browser().close();
