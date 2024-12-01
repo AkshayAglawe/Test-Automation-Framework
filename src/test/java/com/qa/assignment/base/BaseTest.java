@@ -70,7 +70,11 @@ public class BaseTest {
     public void randomBranch3() {
     	//The random testing method added to master
     }
+<<<<<<< Updated upstream
     public void randomBranch412() {
+=======
+    public void randomBranch413() {
+>>>>>>> Stashed changes
     	//The random testing method added to master
     }
     @AfterMethod
