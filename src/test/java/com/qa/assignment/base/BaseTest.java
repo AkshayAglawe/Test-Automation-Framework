@@ -70,7 +70,7 @@ public class BaseTest {
     public void randomBranch3() {
     	//The random testing method added to master
     }
-    public void randomBranch4() {
+    public void randomBranch412() {
     	//The random testing method added to master
     }
     @AfterMethod
